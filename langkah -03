@@ -1,0 +1,21 @@
+## Langkah Singkat
+
+1. **Build Docker Image**
+```
+docker build -t xv6 .
+```
+
+2. **Jalankan Container**
+```
+docker run -it --rm xv6
+```
+
+3. **Masuk ke xv6**
+```
+make qemu-nox
+```
+
+4. **keluar dari qemu**
+```
+$ QEMU: Terminated
+```
