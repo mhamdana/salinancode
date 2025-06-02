@@ -17,4 +17,10 @@ INSERT INTO Harga_Tiket (asal, tujuan, harga) VALUES
 INSERT INTO Supir (nama_supir, alamat, telepon) VALUES  
 ('Ahmad Dani', 'Jl. Merdeka No. 1', '08123456789'),  
 ('Budi Santoso', 'Jl. Sudirman No. 5', '08234567890'),  
-('Citra Wijaya', 'Jl. Gatot Subroto', '08345678901');  
+('Citra Wijaya', 'Jl. Gatot Subroto', '08345678901'); 
+
+
+INSERT INTO Mobil (nama_mobil, merk, nopol, tahun) VALUES  
+('Avanza', 'Toyota', 'B 1234 ABC', '2020'),  
+('Xenia', 'Daihatsu', 'D 5678 DEF', '2021'),  
+('Ertiga', 'Suzuki', 'L 9012 GHI', '2019');   
