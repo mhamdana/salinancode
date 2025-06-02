@@ -2,3 +2,9 @@ INSERT INTO Admin (nama_user, Username, Password) VALUES
 ('Nanang Pradita', 'nanang', 'pass123'),
 ('Admin Kedua', 'admin2', 'admin456'),
 ('Admin Ketiga', 'admin3', 'admin789');
+
+
+INSERT INTO Harga_Tiket (tujuan, harga, keterangan) VALUES 
+('Jakarta', 150000, 'Tiket Ekonomi'),
+('Bandung', 100000, 'Tiket Bisnis'),
+('Surabaya', 200000, 'Tiket Eksekutif');
