@@ -29,4 +29,30 @@ INSERT INTO Mobil (nama_mobil, merk, nopol, tahun) VALUES
 INSERT INTO Detail (id_mobil, nama_mobil, merk, nopol, tahun, nama_supir, alamat, telepon) VALUES  
 (1, 'Avanza', 'Toyota', 'B 1234 ABC', '2020', 'Ahmad Dani', 'Jl. Merdeka No. 1', '08123456789'),  
 (2, 'Xenia', 'Daihatsu', 'D 5678 DEF', '2021', 'Budi Santoso', 'Jl. Sudirman No. 5', '08234567890'),  
-(3, 'Ertiga', 'Suzuki', 'L 9012 GHI', '2019', 'Citra Wijaya', 'Jl. Gatot Subroto', '08345678901');    
+(3, 'Ertiga', 'Suzuki', 'L 9012 GHI', '2019', 'Citra Wijaya', 'Jl. Gatot Subroto', '08345678901');  
+
+
+
+
+
+
+-- 1. Tambahkan kolom foreign key ke tabel Detail (jika belum ada)
+ALTER TABLE Detail
+ADD COLUMN id_judwal INT,
+ADD COLUMN id_mobil INT,
+ADD COLUMN id_supir INT;
+
+-- 2. Buat relationship antara tabel Detail dan tabel lainnya
+ALTER TABLE Detail
+ADD CONSTRAINT fk_detail_keberangkatan FOREIGN KEY (id_judwal) REFERENCES Keberangkatan(id_judwal),
+ADD CONSTRAINT fk_detail_mobil FOREIGN KEY (id_mobil) REFERENCES Mobil(id_mobil),
+ADD CONSTRAINT fk_detail_supir FOREIGN KEY (id_supir) REFERENCES Supir(id_supir);
+
+-- 3. (Opsional) Tambahkan relationship untuk tabel Keberangkatan
+ALTER TABLE Keberangkatan
+ADD COLUMN id_tiket INT,
+ADD CONSTRAINT fk_keberangkatan_tiket FOREIGN KEY (id_tiket) REFERENCES Harga_Tiket(id_tiket);
+
+-- 4. Verifikasi relationship yang telah dibuat
+SHOW CREATE TABLE Detail;
+SHOW CREATE TABLE Keberangkatan; 
