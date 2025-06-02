@@ -8,3 +8,8 @@ INSERT INTO Harga_Tiket (tujuan, harga, keterangan) VALUES
 ('Jakarta', 150000, 'Tiket Ekonomi'),
 ('Bandung', 100000, 'Tiket Bisnis'),
 ('Surabaya', 200000, 'Tiket Eksekutif');
+
+INSERT INTO Harga_Tiket (asal, tujuan, harga) VALUES  
+('Jakarta', 'Bandung', 150000),  
+('Surabaya', 'Yogyakarta', 200000),  
+('Medan', 'Bali', 350000);  
