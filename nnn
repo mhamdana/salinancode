@@ -13,3 +13,8 @@ INSERT INTO Harga_Tiket (asal, tujuan, harga) VALUES
 ('Jakarta', 'Bandung', 150000),  
 ('Surabaya', 'Yogyakarta', 200000),  
 ('Medan', 'Bali', 350000);  
+
+INSERT INTO Supir (nama_supir, alamat, telepon) VALUES  
+('Ahmad Dani', 'Jl. Merdeka No. 1', '08123456789'),  
+('Budi Santoso', 'Jl. Sudirman No. 5', '08234567890'),  
+('Citra Wijaya', 'Jl. Gatot Subroto', '08345678901');  
